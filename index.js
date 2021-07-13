@@ -5,8 +5,10 @@ const chalk = require('chalk')
 const express = require('express')
 const Router = require('express').Router
 const bodyParser = require('body-parser');
-const app = express()
+const app = express();
+var cors = require('cors');
 
+app.use(cors());
 app.use(bodyParser.json());
 
 const router = Router()
