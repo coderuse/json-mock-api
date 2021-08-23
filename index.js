@@ -117,6 +117,7 @@ function createRouteHandler(PORT, FILES_DIR) {
 function jsonMockApi(port, dir, middleware) {
   const PORT = port || 3000
   const FILES_DIR = path.join(process.cwd(), dir) || process.cwd()
+  console.log(FILES_DIR);
   const routeHandler = createRouteHandler(PORT, FILES_DIR)
   const userMiddleware = loadUserMiddleware(middleware)
   const userMiddlewareLoaded = userMiddleware.filter(isFunction)
